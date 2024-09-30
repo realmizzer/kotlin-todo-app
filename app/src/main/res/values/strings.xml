@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">TodoApp</string>
+    <string name="app_image_description">TodoApp Image</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="author">Nikolaev Maxim</string>
+    <string name="author_logo_description">Serious Author Image</string>
 </resources>
