@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TodoApp</string>
+    <string name="app_image_description">Изображение TodoApp</string>
+    <string name="title_home">Главная</string>
+    <string name="author">Николаев Максим</string>
+    <string name="author_logo_description">Серьёзная аватарка автора</string>
+    <string name="type_email">Введите e-mail</string>
+    <string name="type_password">Введите пароль</string>
+    <string name="retype_password">Повторите пароль</string>
+</resources>
