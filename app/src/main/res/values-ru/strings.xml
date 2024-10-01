@@ -7,5 +7,11 @@
     <string name="author_logo_description">Серьёзная аватарка автора</string>
     <string name="type_email">Введите e-mail</string>
     <string name="type_password">Введите пароль</string>
-    <string name="retype_password">Повторите пароль</string>
+    <string name="verify_password">Повторите пароль</string>
+    <string name="sign_up">Регистрация</string>
+    <string name="sign_up_description">Изображение регистрации</string>
+    <string name="already_registered">У меня есть аккаунт</string>
+    <string name="sign_in">Войтти</string>
+    <string name="sign_in_description">Изображение входа</string>
+    <string name="no_account">У меня нет аккаунта</string>
 </resources>

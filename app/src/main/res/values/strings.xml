@@ -9,5 +9,11 @@
 
     <string name="type_email">Type e-mail</string>
     <string name="type_password">Type password</string>
-    <string name="retype_password">Retype password</string>
+    <string name="verify_password">Verify password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_up_description">Sign Up Image</string>
+    <string name="already_registered">I have account</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_in_description">Sign In Image</string>
+    <string name="no_account">I have no account</string>
 </resources>
