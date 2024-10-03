@@ -9,7 +9,7 @@
     <string name="verify_password">Повторите пароль</string>
     <string name="sign_up">Регистрация</string>
     <string name="sign_up_description">Изображение регистрации</string>
-    <string name="already_registered">У меня есть аккаунт</string>
+    <string name="already_registered">Есть аккаунт</string>
     <string name="sign_in">Войти</string>
     <string name="sign_in_description">Изображение входа</string>
     <string name="no_account">Нет аккаунта</string>
