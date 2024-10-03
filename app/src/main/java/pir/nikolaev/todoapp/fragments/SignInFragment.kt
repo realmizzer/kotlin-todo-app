@@ -35,6 +35,10 @@ class SignInFragment : Fragment() {
         init(view)
         registerEvents()
 
+        if (auth.currentUser != null) {
+            navController.navigate(R.id.action_signInFragment_to_homeFragment)
+        }
+
     }
 
     private fun init(view: View) {
