@@ -16,4 +16,8 @@
     <string name="sign_in">Sign In</string>
     <string name="sign_in_description">Sign In Image</string>
     <string name="no_account">No Account</string>
+    <string name="incorrect_email_password">Email or Password entered incorrectly</string>
+    <string name="some_fields_empty">Looks like some fields are empty</string>
+    <string name="sign_in_success">We are diving in!</string>
+    <string name="password_match_fail">Passwords don\'t match</string>
 </resources>

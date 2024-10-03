@@ -13,4 +13,8 @@
     <string name="sign_in">Войти</string>
     <string name="sign_in_description">Изображение входа</string>
     <string name="no_account">Нет аккаунта</string>
+    <string name="incorrect_email_password">Неверно введены логин или пароль</string>
+    <string name="some_fields_empty">Похоже, некоторые поля пустые</string>
+    <string name="sign_in_success">Погружаемся!</string>
+    <string name="password_match_fail">Пароли не совпадают</string>
 </resources>

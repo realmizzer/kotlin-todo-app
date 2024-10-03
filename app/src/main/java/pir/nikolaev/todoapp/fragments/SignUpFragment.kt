@@ -1,6 +1,8 @@
 package pir.nikolaev.todoapp.fragments
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -51,24 +53,58 @@ class SignUpFragment : Fragment() {
         }
 
         binding.buttonSignUp.setOnClickListener {
+            toggleProgressBar()
+
             val email = binding.etEmail.text.toString().trim()
             val password = binding.etPassword.text.toString().trim()
             val verifyPassword = binding.etVerifyPassword.text.toString().trim()
 
-            if (email.isEmpty() || password.isEmpty() || verifyPassword.isEmpty()) return@setOnClickListener
-            if (password != verifyPassword) return@setOnClickListener
+            if (
+                email.isEmpty()
+                || password.isEmpty()
+                || verifyPassword.isEmpty()) {
+
+                delayProgressBar(1000) {
+                    Toast.makeText(context, R.string.some_fields_empty, Toast.LENGTH_SHORT).show()
+                }
+                return@setOnClickListener
+            }
+
+            if (password != verifyPassword) {
+                delayProgressBar(1000) {
+                    Toast.makeText(context, R.string.password_match_fail, Toast.LENGTH_SHORT).show()
+                }
+                return@setOnClickListener
+            }
 
             auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
+                toggleProgressBar()
+
                 if (!it.isSuccessful) {
                     Toast.makeText(context, it.exception?.message, Toast.LENGTH_SHORT).show()
                     return@addOnCompleteListener
                 }
 
                 navController.navigate(R.id.action_signUpFragment_to_homeFragment)
-                Toast.makeText(context, "Sign Up was completed successfully", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, R.string.sign_in_success, Toast.LENGTH_SHORT).show()
             }
         }
 
+    }
+
+    private fun toggleProgressBar() {
+
+        val isProgressBarVisible = binding.progressBar.visibility == View.VISIBLE
+        binding.progressBar.visibility = if (isProgressBarVisible) View.GONE else View.VISIBLE
+        binding.buttonSignUp.visibility = if (isProgressBarVisible) View.VISIBLE else View.GONE
+
+    }
+
+    private fun delayProgressBar(delay: Long, callback: () -> Unit) {
+        Handler(Looper.myLooper()!!).postDelayed({
+            toggleProgressBar()
+            callback()
+        }, delay)
     }
 
 }

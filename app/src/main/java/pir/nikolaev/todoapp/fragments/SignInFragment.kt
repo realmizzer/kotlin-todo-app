@@ -1,6 +1,8 @@
 package pir.nikolaev.todoapp.fragments
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -55,22 +57,46 @@ class SignInFragment : Fragment() {
         }
 
         binding.buttonSignIn.setOnClickListener {
+            toggleProgressBar()
+
             val email = binding.etEmail.text.toString().trim()
             val password = binding.etPassword.text.toString().trim()
 
-            if (email.isEmpty() || password.isEmpty()) return@setOnClickListener
+            if (email.isEmpty() || password.isEmpty()) {
+                delayProgressBar(1000) {
+                    Toast.makeText(context, R.string.incorrect_email_password, Toast.LENGTH_SHORT).show()
+                }
+                return@setOnClickListener
+            }
 
             auth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
+                toggleProgressBar()
+
                 if (!it.isSuccessful) {
                     Toast.makeText(context, it.exception?.message, Toast.LENGTH_SHORT).show()
                     return@addOnCompleteListener
                 }
 
                 navController.navigate(R.id.action_signInFragment_to_homeFragment)
-                Toast.makeText(context, "Sign In was completed successfully", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, R.string.sign_in_success, Toast.LENGTH_SHORT).show()
             }
         }
 
+    }
+
+    private fun toggleProgressBar() {
+
+        val isProgressBarVisible = binding.progressBar.visibility == View.VISIBLE
+        binding.progressBar.visibility = if (isProgressBarVisible) View.GONE else View.VISIBLE
+        binding.buttonSignIn.visibility = if (isProgressBarVisible) View.VISIBLE else View.GONE
+
+    }
+
+    private fun delayProgressBar(delay: Long, callback: () -> Unit) {
+        Handler(Looper.myLooper()!!).postDelayed({
+            toggleProgressBar()
+            callback()
+        }, delay)
     }
 
 }
