@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">TodoApp</string>
     <string name="app_image_description">Изображение TodoApp</string>
     <string name="title_home">Главная</string>
     <string name="author">Николаев Максим</string>
@@ -11,7 +10,7 @@
     <string name="sign_up">Регистрация</string>
     <string name="sign_up_description">Изображение регистрации</string>
     <string name="already_registered">У меня есть аккаунт</string>
-    <string name="sign_in">Войтти</string>
+    <string name="sign_in">Войти</string>
     <string name="sign_in_description">Изображение входа</string>
-    <string name="no_account">У меня нет аккаунта</string>
+    <string name="no_account">Нет аккаунта</string>
 </resources>
