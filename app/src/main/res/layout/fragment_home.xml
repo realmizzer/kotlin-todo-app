@@ -10,19 +10,23 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/shape_rounded_container"
-            android:src="@drawable/ic_plus"
-            android:contentDescription="@string/add_todo"
-            app:layout_constraintTop_toTopOf="parent"
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.95"
-            app:layout_constraintVertical_bias="0.98"/>
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/btnAdd"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom|end"
+                android:layout_marginBottom="32dp"
+                android:layout_marginRight="32dp"
+                android:background="@drawable/shape_rounded_container"
+                android:contentDescription="@string/add_todo"
+                android:src="@drawable/ic_plus" />
+        </FrameLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
