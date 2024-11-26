@@ -68,7 +68,7 @@ class HomeFragment : Fragment(), AddTodoDialogFragment.IAddTodoDialogListener {
                 return@addOnCompleteListener
             }
 
-            Toast.makeText(context, R.string.sign_in_success, Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, R.string.add_todo_success, Toast.LENGTH_SHORT).show()
         }
     }
 
