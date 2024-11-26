@@ -23,4 +23,9 @@
     <string name="close_todo_create">Закрыть создание задачи</string>
     <string name="empty_todo_text">Пожалуйста, введите текст задачи</string>
     <string name="add_todo_success">Задача добавлена</string>
+    <string name="todo_title">Задача</string>
+    <string name="edit">Редактировать</string>
+    <string name="delete">Удалить</string>
+    <string name="todo_delete_success">Задача удалена</string>
+    <string name="todo_edit_success">Задача отредактирована</string>
 </resources>

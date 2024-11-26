@@ -26,4 +26,9 @@
     <string name="close_todo_create">Close Todo Create</string>
     <string name="empty_todo_text">Please, enter todo text</string>
     <string name="add_todo_success">Added todo</string>
+    <string name="todo_title">Todo</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="todo_delete_success">Todo deleted</string>
+    <string name="todo_edit_success">Todo edited</string>
 </resources>
